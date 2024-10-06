@@ -1,0 +1,92 @@
+﻿<html>
+<head>
+
+    <link type="text/css" rel="stylesheet" href="css/iletisim.css">
+    <link type="text/css" rel="stylesheet" href="css/layout/layout.css">
+    <meta charset="UTF-8" />
+    <title>İletişim</title>
+</head>
+<body>
+    <ul class="menu">
+        <li><img class="logo" src="css/layout/logo_transparent.png" style="width:100%;height:200px;" /></li>
+
+        <li>
+            <a href="index.html">Anasayfa</a>
+        </li>
+        <li>
+            <a href="#" onclick="altmenu1()">Bilgilerim <img style="width:50px;height:50px;float:right;margin-top:-5%;margin-right:-7%;" src="css/layout/arrowbottom.svg" /></a>
+            <ul class="altmenu" id="altmenu1">
+                <li><a href="kisisel.html" target="_blank">Kişisel Bilgilerim</a></li>
+                <li><a href="egitim.html" target="_blank">Eğitim Bilgilerim</a></li>
+                <li><a href="amac.html" target="_blank">Ben kimim?</a></li>
+            </ul>
+        </li>
+        <li><a href="yazilim.html">Yazılım </a></li>
+        <li><a href="hakkımda.html" target="_blank">Hakkımda</a></li>
+        <li><a class="active">İletişim</a></li>
+    </ul>
+    <br /><br />
+    <div class="content">
+        <br />
+        <button onclick="topFunction()" id="myBtn" title="Go to top"><img src="img/top.jpg" /></button>
+        <center><span> İLETİŞİM</span></center>
+        <form action="https://formspree.io/mdoakgzj" method="POST">
+            <label for="adi">Adı</label>
+            <input type="text" id="adi" name="adi" placeholder="Adı" required />
+
+            <label for="soyadi">Soyadı</label>
+            <input type="text" id="soyadi" name="soyadi" placeholder="Soyadı" required />
+
+            <label for="tarih">Doğum Tarihi</label>
+            <input type="date" id="dogumtarihi" name="dogumtarihi" required />
+
+            <label for="tel">Telefon Numarası</label>
+            <input type="tel" size="8" id="telno" name="telno" placeholder=" 0555 55 55" required />
+
+            <label for="mail">E-Mail</label>
+            <input type="email" id="email" name="email" placeholder="email@hotmail.com" required />
+
+            <label for="mesaj"> Mesajınız</label>
+            <textarea id="mesaj" name="mesaj" placeholder="İletmek istediğiniz mesajı yazınız" required></textarea>
+            <input type="submit" value="Gönder">
+        </form>
+        <br />
+        <br />
+        <footer>
+                <div>Hakkında | Copyright | Bilgilerim | İletişim</div>
+                <br />
+                <div>Tel: 05459347694</div>
+                <div>Email: eyyuperdogan50@gmail.com</div>
+        </footer>
+    </div>
+    <script>
+        var rd1 = true;
+        function altmenu1() {
+
+            if (rd1 == true) {
+                document.getElementById("altmenu1").style.display = "block"; rd1 = false;
+            }
+            else { document.getElementById("altmenu1").style.display = "none"; rd1 = true; }
+        }
+        //w3schools.topfunction
+        var mybutton = document.getElementById("myBtn");
+
+        // When the user scrolls down 20px from the top of the document, show the button
+        window.onscroll = function () { scrollFunction() };
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                mybutton.style.display = "block";
+            } else {
+                mybutton.style.display = "none";
+            }
+        }
+
+        // When the user clicks on the button, scroll to the top of the document
+        function topFunction() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+    </script>
+</body>
+</html>

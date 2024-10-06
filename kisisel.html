@@ -1,0 +1,86 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <link type="text/css" rel="stylesheet" href="css/layout/layout.css">
+    <link type="text/css" rel="stylesheet" href="css/bilgilerim.css">
+    <meta charset="UTF-8" />
+    <title>Kişisel Bilgilerim</title>
+</head>
+<body>
+   
+    <ul class="menu">
+        <li><img class="logo" src="css/layout/logo_transparent.png" style="width:100%;height:200px;" /></li>
+
+        <li>
+            <a href="index.html">Anasayfa</a>
+        </li>
+        <li>
+            <a href="#" onclick="altmenu1()">Bilgilerim <img style="width:50px;height:50px;float:right;margin-top:-5%;margin-right:-7%;" src="css/layout/arrowbottom.svg" /></a>
+            <ul class="altmenu" id="altmenu1">
+                <li><a class="active" ">Kişisel Bilgilerim</a></li>
+                <li><a href="egitim.html" target="_blank">Eğitim Bilgilerim</a></li>
+                <li><a href="amac.html" target="_blank">Ben kimim?</a></li>
+            </ul>
+        </li>
+        <li><a href="yazilim.html">Yazılım </a></li>
+        <li><a href="hakkımda.html" target="_blank">Hakkımda</a></li>
+        <li><a href="iletisim.html">İletişim</a></li>
+    </ul>
+    <div class="content" style="height:auto">
+        <button onclick="topFunction()" id="myBtn" title="Go to top"><img src="img/top.jpg" /></button>
+        <header>EYYUP ERDOGAN - Kişisel Web Sayfası</header>
+        <br /><br />
+        <center>
+            <div class="card">
+                <br /><br />
+                <img src="img/eyyup-on.png" alt="Avatar" style="width:300px;height:300px">
+                <div class="container">
+                    <h4><b>EYYUP ERDOĞAN</b></h4>
+                    <h4><b>Kişisel Bilgilerim</b></h4>
+                    <p>E-posta: eyyuperdogan50@gmail.com</p>
+                    <p>Telefon Numarası: 05459347694</p>
+                </div>
+            </div>
+        </center>
+        <br />
+        <footer>
+            <center>
+                <div>Hakkında | Copyright | Bilgilerim | İletişim</div>
+                <br />
+                <div>Tel: 05459347694</div>
+                <div>Email: eyyuperdogan50@gmail.com</div>
+            </center>
+        </footer>
+    </div>
+</body>
+<script>
+    var mybutton = document.getElementById("myBtn");
+
+    // When the user scrolls down 20px from the top of the document, show the button
+    window.onscroll = function () { scrollFunction() };
+
+    function scrollFunction() {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            mybutton.style.display = "block";
+        } else {
+            mybutton.style.display = "none";
+        }
+    }
+
+    // When the user clicks on the button, scroll to the top of the document
+    function topFunction() {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+    }
+    document.getElementById("altmenu1").style.display = "block";
+    var rd1 = false;
+    function altmenu1() {
+
+        if (rd1 == true) {
+            document.getElementById("altmenu1").style.display = "block"; rd1 = false;
+        }
+        else { document.getElementById("altmenu1").style.display = "none"; rd1 = true; }
+    }
+</script>
+</html>

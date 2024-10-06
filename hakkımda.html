@@ -1,0 +1,193 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <link type="text/css" rel="stylesheet" href="css/hakkimda.css">
+    <script src="jspdf.min.js"></script>
+    <script src="jspdf.debug.js"></script>
+    <script src="jquery.js"></script>
+    <meta charset="UTF-8"/>
+    <script>
+        function saveas() {
+            var baslik = document.getElementById("baslik").textContent;
+            var kisiselbaslik = document.getElementById("kisiselbaslik").textContent;
+            var kisisel1 = document.getElementById("kisisel1").textContent;var kisisel2 = document.getElementById("kisisel2").textContent;var kisisel3 = document.getElementById("kisisel3").textContent;var kisisel4 = document.getElementById("kisisel4").textContent;
+            var egitimbaslik = document.getElementById("egitimbaslik").textContent;
+            var egitim1 = document.getElementById("egitim1").textContent;var egitim2 = document.getElementById("egitim2").textContent;var egitim3 = document.getElementById("egitim3").textContent;
+            var yetenekbaslik = document.getElementById("yetenekbaslik").textContent;
+            var yetenek1 = document.getElementById("yetenek1").textContent;
+            var dilyetenek1 = document.getElementById("dilyetenek1").textContent;var dilyetenek2 = document.getElementById("dilyetenek2").textContent;var dilyetenek3 = document.getElementById("dilyetenek3").textContent;var dilyetenek4 = document.getElementById("dilyetenek4").textContent;
+            var yetenek2 = document.getElementById("yetenek1").textContent;
+            var programyetenek1 = document.getElementById("programyetenek1").textContent;var programyetenek2 = document.getElementById("programyetenek2").textContent;var programyetenek3 = document.getElementById("programyetenek3").textContent;var programyetenek4 = document.getElementById("programyetenek4").textContent;
+            var projebaslik = document.getElementById("projebaslik").textContent;
+            var proje1 = document.getElementById("proje1").textContent;var proje2 = document.getElementById("proje2").textContent;var proje3 = document.getElementById("proje3").textContent;var proje4 = document.getElementById("proje4").textContent;var proje5 = document.getElementById("proje5").textContent;
+            var isbaslik = document.getElementById("isbaslik").textContent;var is1 = document.getElementById("is1").textContent;
+            var digerbaslik = document.getElementById("digerbaslik").textContent;
+            var hobiler = document.getElementById("hobiler").textContent;
+            var hobi1 = document.getElementById("hobi1").textContent;var hobi2 = document.getElementById("hobi2").textContent;var hobi3 = document.getElementById("hobi3").textContent;var hobi4 = document.getElementById("hobi4").textContent;
+            var diller = document.getElementById("diller").textContent;
+            var dil1 = document.getElementById("dil1").textContent;
+            var pdf = new jsPDF();
+            pdf.setFont("arial", "bold");
+            pdf.setFontSize(20);
+            pdf.text(70, 30, baslik);
+            pdf.setFontSize(10);
+            pdf.text(20, 50, kisiselbaslik);
+            pdf.setFont("arial", "")
+            pdf.text(20, 60, kisisel1); pdf.text(20, 70, kisisel2); pdf.text(20, 80, kisisel3); pdf.text(20, 90, kisisel4);
+            pdf.setFont("arial", "bold")
+            pdf.text(100, 50, egitimbaslik);
+            pdf.setFont("arial", "")
+            pdf.text(100, 60, egitim1); pdf.text(100, 70, egitim2); pdf.text(100, 80, egitim3);
+            pdf.setFont("arial", "bold")
+            pdf.text(20, 110, yetenekbaslik);
+            pdf.setFont("arial", "")
+            pdf.text(20, 120, yetenek1);
+            pdf.text(55, 120, dilyetenek1); pdf.text(55, 125, dilyetenek2); pdf.text(55, 130, dilyetenek3); pdf.text(55, 135, dilyetenek4);
+            pdf.text(20, 140, yetenek2);
+            pdf.text(55, 140, programyetenek1); pdf.text(55, 145, programyetenek2); pdf.text(55, 150, programyetenek3); pdf.text(55, 155, programyetenek4);
+            pdf.setFont("arial", "bold")
+            pdf.text(100, 110, projebaslik);
+            pdf.setFont("arial", "")
+            pdf.text(100, 120, proje1); pdf.text(100, 130, proje2); pdf.text(100, 140, proje3); pdf.text(100, 150, proje4); pdf.text(100, 160, proje5);
+            pdf.setFont("arial", "bold")
+            pdf.text(20, 180, isbaslik);
+            pdf.setFont("arial", "")
+            pdf.text(20, 190, is1);
+            pdf.setFont("arial", "bold")
+            pdf.text(100, 180, digerbaslik);
+            pdf.setFont("arial", "")
+            pdf.text(100, 190, hobiler); pdf.text(125, 190, hobi1); pdf.text(125, 195, hobi2); pdf.text(125, 200, hobi3); pdf.text(125, 205, hobi4);
+            pdf.text(100, 210, diller); pdf.text(126, 210, dil1);
+            pdf.save('yunusemrecoskunCV.pdf');
+        }
+    </script>
+    <title>Hakkimda</title>
+    <script type="text/javascript">
+        function edit(div) {
+            div.style.border = "3px solid #333";
+            div.style.padding = "10px";
+            div.contentEditable = true;
+        }
+        function save(div) {
+            div.style.border = "";
+            div.style.padding = "";
+            div.contentEditable = false;
+        }
+    </script>
+</head>
+<body>
+
+    <center>
+        <fieldset>
+            <legend> Özgeçmiş</legend>
+            <!--<button type="button" onclick="duzenle('ozgecmis')" id="duzenlebtn"> Düzenle</button>-->
+            <button type="button" onclick="saveas()"> İNDİR </button>
+            <div class="content ozgecmis" id="ozgecmis">
+                <br />
+                <div class="bolum1" ondblclick="edit(this)" onblur="save(this)">
+                    <center><h1 id="baslik">EYYÜP ERDOĞAN</h1></center>
+                </div>
+                <br />
+                <div class="bolum1" ondblclick="edit(this)" onblur="save(this)">
+                    <div style="font-size: 20px;font-weight: bold;" id="kisiselbaslik">Kisisel Bilgiler</div>
+                    <div id="kisisel1">Ad Soyad: EYYÜP ERDOĞAN</div>
+                    <div id="kisisel2">Dogum Tarihi: 01.07.1998</div>
+                    <div id="kisisel3">Dogum Yeri: BATMAN</div>
+                </div>
+                <br />
+                <div class="bolum1" ondblclick="edit(this)" onblur="save(this)">
+                    <div style="font-size: 20px;font-weight: bold;" id="egitimbaslik">Egitim Bilgileri </div>
+                    <div id="Lisans">2021-~ Sivas Cumhuriyet Üniversitesi - Bilgisiyar Muhendisligi </div>
+                    <div id="Lise">2012-2016 Batman Fatih Anadolu Lisesi </div>
+                    <div id="IlkOgretim-ortaokul">2003-2012 16 Mayıs IlkOgretim  Okulu </div>
+                </div>
+                <br />
+                <div class="bolum1" ondblclick="edit(this)" onblur="save(this)">
+                    <div style="font-size: 20px;font-weight: bold;" id="yetenekbaslik">Yetenek Bilgileri </div>
+                    <div id="yetenek1" style="font-size: 15px;font-weight: bold;">Programlama Dilleri </div>
+                    <div id="dilyetenek1">C#</div>
+                    <div id="dilyetenek2">HTML</div>
+                    <div id="dilyetenek3">CSS</div>
+                    <div id="dilyetenek4">JS</div>
+                    <div id="yetenek2" style="font-size: 15px;font-weight: bold;">Programlar</div>
+                    <div id="programyetenek1">ASP.NET MVC</div>
+                    <div id="programyetenek2">.NET FRAMEWORK</div>
+                    <div id="programyetenek3">WPF</div>
+                    <div id="programyetenek4">WINFORM</div>
+                </div>
+            </div>
+            <br />
+            <fieldset>
+                <legend> BİLDİĞİM DİLLER</legend>
+            <div class="col-sm-4">
+                <h4>C#</h4>
+                <p>.NET platformunun ana dili olan C#, nesne yönelimli programlama (OOP) prensiplerini kullanarak güçlü ve esnek yazılımlar geliştirmek için kullanılır.</p>
+            </div>
+            <div class="col-sm-4">
+                <h4>.NET Core ve .NET Framework</h4>
+                <p>.NET Core, platform bağımsız uygulamalar geliştirmek için kullanılırken, .NET Framework Windows tabanlı uygulamalar için kullanılır.</p>
+            </div>
+            <div class="col-sm-4">
+                <h4>SQL Server</h4>
+                <p>Veri tabanı yönetimi ve optimizasyonu için kullanılan SQL Server, veri saklama ve işlem yapma süreçlerinde önemli bir rol oynar.</p>
+            </div>
+        </div>
+        <br>
+        <div class="row">
+            <div class="col-sm-4">
+                <h4>ASP.NET MVC</h4>
+                <p>Model-View-Controller (MVC) mimarisi kullanarak web uygulamaları geliştirme konusunda bilgi sahibi olmalısınız.</p>
+            </div>
+            <div class="col-sm-4">
+                <h4>Entity Framework</h4>
+                <p>Entity Framework, veri tabanı işlemlerini daha kolay ve verimli hale getiren bir ORM (Object-Relational Mapping) aracıdır.</p>
+            </div>
+            <div class="col-sm-4">
+                <h4>Azure</h4>
+                <p>Microsoft Azure, bulut bilişim çözümleri ve hizmetleri sunar. Azure üzerinde uygulama barındırma ve veri tabanı yönetimi hakkında bilgi sahibi olmalısınız.</p>
+            </div>
+        </div>
+        <br>
+        <div class="row">
+            <div class="col-sm-4">
+                <h4>Git ve GitHub</h4>
+                <p>Versiyon kontrol sistemleri olan Git ve GitHub, kod yönetimi ve işbirliği için temel araçlardır.</p>
+            </div>
+            <div class="col-sm-4">
+                <h4>Microservices ve Docker</h4>
+                <p>Microservices mimarisi ile bağımsız hizmetler geliştirmek ve Docker kullanarak bu hizmetleri container içinde çalıştırmak önemlidir.</p>
+            </div>
+            <div class="col-sm-4">
+                <h4>Güvenlik</h4>
+                <p>OAuth, JWT gibi güvenlik protokolleri ve OWASP en iyi uygulamaları hakkında bilgi sahibi olmalısınız.</p>
+            </div>
+            <br />
+            <fieldset>
+
+            <div class="bolum1" ondblclick="edit(this)" onblur="save(this)">
+                <div style="font-size: 20px;font-weight: bold;" id="isbaslik">Is Deneyimleri</div>
+                <div id="is1"> 1 yıldır yarı zamanlı özel bir şirkette çalışıyorum  </div>
+            </div>
+            <br />
+            <div class="bolum1" ondblclick="edit(this)" onblur="save(this)">
+                <div style="font-size: 20px;font-weight: bold;" id="digerbaslik">Diger</div>
+                <div id="hobiler" style="font-size: 15px;font-weight: bold;"> Hobiler </div>
+                <div id="hobi1"> Spor</div>
+                <div id="hobi2"> Basketbol</div>
+                <div id="hobi3"> Bilgisayar</div>
+                <div id="hobi4"> Bilisim</div>
+                <div id="diller" style="font-size: 15px;font-weight: bold;"> Diller </div>
+                <div id="dil1">Ingilizce (B Seviye)</div>
+            </div>
+            </div>
+        <br /><br />
+    </center>
+    <footer >
+            <div>Hakkında | Copyright | Bilgilerim | İletişim</div>
+            <br />
+            <div>Tel: 05459347694</div>
+            <div>Email: eyyuperdogan50@gmail.com</div>
+    </footer>
+</body>
+</html>

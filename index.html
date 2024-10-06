@@ -1,0 +1,132 @@
+﻿<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8"/>
+    <link type="text/css" rel="stylesheet" href="css/layout/layout.css">
+    <link type="text/css" rel="stylesheet" href="css/anasayfa.css">
+    <title>Anasayfa</title>
+</head>
+<body>
+<!--w3schools-menu -->
+    <ul class="menu">
+        <li><img class="logo" src="css/layout/logo_transparent.png" style="width:100%;height:200px;" /></li>
+
+        <li>
+            <a class="active">Anasayfa</a>
+        </li>
+        <li>
+            <a href="#" onclick="altmenu1()">Bilgilerim <img style="width:50px;height:50px;float:right;margin-top:-5%;margin-right:-7%;" src="css/layout/arrowbottom.svg" /></a>
+            <ul class="altmenu" id="altmenu1">
+                <li><a href="kisisel.html" target="_blank">Kişisel Bilgilerim</a></li>
+                <li><a href="egitim.html" target="_blank">Eğitim Bilgilerim</a></li>
+                <li><a href="amac.html" target="_blank">Ben kimim?</a></li>
+            </ul>
+        </li>
+        <li><a href="yazilim.html">Yazılım </a></li>
+        <li><a href="hakkımda.html" target="_blank">Hakkımda</a></li>
+        <li><a href="iletisim.html">İletişim</a></li>
+    </ul>
+    <div class="content" style="height:auto">
+        <table class="sosyalmedya">
+            <tr>
+                <th class="dondur"><a href="https://www.linkedin.com/in/eyy%C3%BCp-erdo%C4%9Fan-bb0965235/" target="_blank"><img src="img/linkedin.png" /></a></th>
+                <th class="dondur"><a href="https://github.com/eyyuppp" target="_blank"><img src="img/github.png" /></a></th>
+            </tr>
+        </table>
+    </div>
+    <div id="allcontent">
+        <button onclick="topFunction()" id="myBtn" title="Go to top"><img src="img/top.jpg" /></button>
+        <header>EYYUP ERDOGAN - Kişisel Web Sayfası</header>
+        <div class="content" style="height:100px;margin-left:53%; margin-top:5%"><h2>ANASAYFA</h2></div>
+        <div class="content">
+            <div class="slideshow-container">
+
+                <div class="mySlides fade">
+                    <div class="numbertext">1 / 3</div>
+                    <img src="img/eyyup-arka.png" style="width:100%">
+                    <div class="text">Sofware</div>
+                </div>
+
+                <div class="mySlides fade">
+                    <div class="numbertext">2 / 3</div>
+                    <img src="img/dotnet.webp" style="width:100%">
+                    <div class="text">Sofware</div>
+                </div>
+
+                <div class="mySlides fade">
+                    <div class="numbertext">3 / 3</div>
+                    <img src="img/bilgisayar.jpeg" style="width:100%">
+                    <div class="text">Sofware</div>
+                </div>
+
+            </div>
+            <br>
+        </div>
+        <div class="content" style="text-align:center">
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+        </div>
+
+       
+
+        <footer style="margin-left:20%;width:67%">
+                <div>Hakkında | Copyright | Bilgilerim | İletişim</div>
+                <br />
+                <div>Tel: 05459347694</div>
+                <div>Email: eyyuperdogan50@gmail.com</div>
+        </footer>
+    </div>
+</body>
+<script>
+    var slideIndex = 0;
+    showSlides();
+
+    function showSlides() {
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+        var dots = document.getElementsByClassName("dot");
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        slideIndex++;
+        if (slideIndex > slides.length) { slideIndex = 1 }
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex - 1].style.display = "block";
+        dots[slideIndex - 1].className += " active";
+        setTimeout(showSlides, 2000); // Change image every 2 seconds
+    }
+    
+    var rd = true;
+    function altmenu() {
+
+        if (rd == true) {
+            document.getElementById("altmenu").style.display = "block"; rd = false;
+        }
+        else { document.getElementById("altmenu").style.display = "none"; rd = true; }
+    }
+    var rd1 = true;
+    function altmenu1() {
+
+        if (rd1 == true) {
+            document.getElementById("altmenu1").style.display = "block"; rd1 = false;
+        }
+        else { document.getElementById("altmenu1").style.display = "none"; rd1 = true; }
+    }
+    var mybutton = document.getElementById("myBtn");
+    window.onscroll = function () { scrollFunction() };
+
+    function scrollFunction() {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            mybutton.style.display = "block";
+        } else {
+            mybutton.style.display = "none";
+        }
+    }
+    function topFunction() {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+    }
+</script>
+</html>

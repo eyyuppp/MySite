@@ -1,0 +1,68 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+    <meta charset="UTF-8"/>
+    <link type="text/css" rel="stylesheet" href="css/layout/layout.css">
+    <link type="text/css" rel="stylesheet" href="css/bilgilerim.css">
+    <title>Eğitim Bilgilerim</title>
+</head>
+<body>
+<!--*w3-schools.Menucontent-->
+    <ul class="menu">
+        <li><img class="logo" src="css/layout/logo_transparent.png" style="width:100%;height:200px;" /></li>
+
+        <li><a href="index.html">Anasayfa</a></li>
+        <li>
+            <a href="#" onclick="altmenu1()">Bilgilerim <img style="width:50px;height:50px;float:right;margin-top:-5%;margin-right:-7%;" src="css/layout/arrowbottom.svg" /></a>
+            <ul class="altmenu" id="altmenu1">
+                <li><a href="kisisel.html" target="_blank">Kişisel Bilgilerim</a></li>
+                <li><a class="active" target="_blank">Eğitim Bilgilerim</a></li>
+                <li><a href="amac.html" target="_blank">Ben kimim?</a></li>
+            </ul>
+        </li>
+        <li><a href="yazilim.html">Yazılım </a></li>
+        <li><a href="hakkımda.html" target="_blank">Hakkımda</a></li>
+        <li><a href="iletisim.html">İletişim</a></li>
+    </ul>
+    <div class="content" style="height:auto">
+
+<!--*w3-schools.Card-->
+        <header>EYYUP ERDOGAN - Kişisel Web Sayfası</header>
+        <br /><br />
+        <center>
+            <div class="card">
+                <br /><br />
+                <img src="img/eyyup-on.png" alt="Avatar" style="width:300px;height:300px">
+                <div style="font-size: 20px;font-weight: bold;" id="egitimbaslik">Egitim Bilgileri </div>
+                <div id="Lisans">2021-~ Sivas Cumhuriyet Üniversitesi - Bilgisiyar Muhendisligi </div>
+                <div id="Lise">2012-2016 Batman Fatih Anadolu Lisesi </div>
+                <div id="IlkOgretim-ortaokul">2003-2012 16 Mayıs IlkOgretim  Okulu </div>
+                <div class="container">
+                    <h4><b>EYYUP ERDOGAN</b></h4>
+                </div>
+            </div>
+        </center>
+        <br />
+        <footer>
+                <div>Hakkında | Copyright | Bilgilerim | İletişim</div>
+                <br />
+                <div>Tel: 05459347694</div>
+                <div>Email: eyyuperdogan50@gmail.com</div>
+        </footer>
+    </div>
+</body>
+<script>
+    
+    document.getElementById("altmenu1").style.display = "block";
+    var rd1 = false;
+    function altmenu1() {
+
+        if (rd1 == true) {
+            document.getElementById("altmenu1").style.display = "block"; rd1 = false;
+        }
+        else { document.getElementById("altmenu1").style.display = "none"; rd1 = true; }
+    }
+</script>
+</html>
